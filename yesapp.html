@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Are you good</title>
+        <style>
+            div{
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */   
+            }
+            body{
+                background-color: #F8C8DC;
+            }
+            p{
+                font-size: 50px;
+                font-family: 'Nunito';
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .btn{
+                background-color: #FFB6C1;
+                color:rgb(19, 16, 16);
+                padding: 20px 35px;
+                border-radius: 12px;
+                cursor: pointer;
+                font-size: 15px;
+                border: none;
+                text-align: center;
+                transition: background-color 0.3s ease;
+}
+            
+            #yesbutton{
+                position: absolute;
+                margin-right: 150px;
+            }
+            #Nobutton{
+                position: absolute;
+                margin-left: 150px;
+                transition: 0.5s;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <p><b>Will you be my better half?</b></p>
+        <div>
+        <img src="cLS1cfxvGOPVpf9g3y.gif" alt="show up">
+        </div>
+        <div>
+        <button class="btn" id="yesbutton" onclick="nextPage()">Yes</button>
+        <button class="btn" id="Nobutton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+
+ <script>
+    function nextPage() {
+        window.location.href="nxtpage.html"
+    }
+
+    function moveButton() {
+        var x=Math.random()*(window.innerWidth-document.getElementById('Nobutton').offsetWidth)-85;
+        var y=Math.random()*(window.innerHeight-document.getElementById('Nobutton').offsetHeight)-48;
+
+        document.getElementById('Nobutton').style.left=`${x}px`;
+        document.getElementById('Nobutton').style.top=`${y}px`;
+    }
+ </script>
+    
+    </body>
+</html>
